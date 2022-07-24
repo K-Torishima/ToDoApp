@@ -7,5 +7,40 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.todoapp.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_createTodoFragment"
+            app:destination="@id/createTodoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_mainFragment_to_todoDetailFragment"
+            app:destination="@id/todoDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTodoFragment"
+        android:name="com.example.todoapp.page.create.CreateToDoFragment"
+        android:label="CreateTodoFragment" />
+    <fragment
+        android:id="@+id/eidtTodoFragment"
+        android:name="com.example.todoapp.page.edit.EditToDoFragment"
+        android:label="EidtTodoFragment" />
+    <fragment
+        android:id="@+id/todoDetailFragment"
+        android:name="com.example.todoapp.page.detail.ToDoDetailFragment"
+        android:label="TodoDetailFragment" >
+        <action
+            android:id="@+id/action_todoDetailFragment_to_eidtTodoFragment"
+            app:destination="@id/eidtTodoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
 </navigation>
